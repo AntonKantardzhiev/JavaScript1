@@ -13,6 +13,7 @@
     //Setting the button
     document.getElementById("run").addEventListener("click", function () {
         let year = parseInt(document.getElementById("year").value);
+
         //Calculating the days
         function numberOfFridayThe13thsIn(year) {
             let count = [];
@@ -25,17 +26,15 @@
             }
             return count;
         }
-        //Setting the months
+
+        //Sorting the months
         let months = [" January ", " February ", " March ", " April ", " May ", " June ", " July ", " August ", " September ", " October ", " November ", " December "]
-        // alert([(numberOfFridayThe13thsIn(j))]);
-        let n = numberOfFridayThe13thsIn(year).sort((a, b)=> a - b);
 
+        //Sorting the answers
+        let n = numberOfFridayThe13thsIn(year).sort((a, b) => a - b);
 
-
-
-
-
-
-})
+        //Printing the answer
+        alert(n.map((num) => months[num]));
+    })
 })
 ();
