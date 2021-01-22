@@ -94,7 +94,7 @@
 let overall = [];
 people.forEach((person)=> overall.push(person["age"]));
         // Printing the overall age
-console.log(Math.floor(overall.reduce((acc, age)=> acc + age)));
+console.log(Math.round(overall.reduce((acc, age)=> acc + age)));
 
     });
 })();
