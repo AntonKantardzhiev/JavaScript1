@@ -31,7 +31,7 @@
     document.getElementById("run").addEventListener("click", function () {
 
         // Filtering true the array and returning only the firs found from fruit of the same value
-let newFruits = fruits.filter((value, index)=> fruits.indexOf(value) === index );
+let newFruits = fruits.reduce((acc, curr)=> acc.includes(curr) ? acc : [...acc, curr], []);
 
         //Printing the result
         alert( newFruits );
