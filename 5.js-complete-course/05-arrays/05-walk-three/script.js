@@ -43,6 +43,6 @@
         // Using a map filter for a hidden loop iteration
         (people.forEach((person)=>console.log(person["firstname"],person["lastname"])));
 
-    })
+    });
 
 })();

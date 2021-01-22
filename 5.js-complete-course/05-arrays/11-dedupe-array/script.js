@@ -27,7 +27,15 @@
         "raisin",
         "cerise",
     ];
+        //Adding an event listener
+    document.getElementById("run").addEventListener("click", function () {
 
-    // your code here
+        // Filtering true the array and returning only the firs found from fruit of the same value
+let newFruits = fruits.filter((value, index)=> fruits.indexOf(value) === index );
+
+        //Printing the result
+        alert( newFruits );
+
+    });
 
 })();

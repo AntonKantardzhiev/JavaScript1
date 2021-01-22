@@ -26,10 +26,12 @@
         "cherry",
     ];
 
-    document.getElementById("run").addEventListener(  {
-        // Making an iteration
-   // if((person)=>{if(person.age > minAge){adults.push(person);}});
-        console.log(adults);
-    });
-
+    document.getElementById("run").addEventListener( "click", function () {
+        // Creating a boolean to search
+      if (fruits.find( fruit => fruit === "apple")){
+          //Printing
+          console.log("yes");
+    } else{
+          console.log("no");
+    }});
 })();

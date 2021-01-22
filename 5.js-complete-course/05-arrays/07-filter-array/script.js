@@ -89,25 +89,16 @@
         },
     ];
     document.getElementById("run").addEventListener("click", function () {
-            // Making an iteration
+        // Creating the new array
         let adults = [];
-        let minAge = 18 ;
-
-        people.forEach((person)=>{if(person.age > minAge){adults.push(person);}});
-        console.log(adults);
-
-            });
-
-
-      /*  for (let i = 0; i < people.length; i++) {
-            let adults = [];
-            // Separating the adults
-            if (people[i].age > 18) {
-                adults.push(people[i]);
+        //Making the threshold
+        let minAge = 18;
+        //Iterating over the array and pushing the result in to the new one
+        people.forEach((person) => {
+            if (person.age > minAge) {
+                adults.push(person);
             }
-            //Printing
-
-        }*/
-
-
+        });
+        console.log(adults);
+    });
 })();
