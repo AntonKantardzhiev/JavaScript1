@@ -10,20 +10,21 @@
 // You will have time to focus on it later.
 
 (function () {
+            //Getting the target and assigning it an empty value
+        let targ = document.getElementById("target");
+        targ.innerHTML ="";
+              //Creating the new text
+        let tex = "All i wanna say is Jump Jump Jump Jump Jump ";
 
-    let tex ="All i wanna say is Jump Jump Jump Jump";
+             //Setting the iteration
+        for (let i = 0; i < tex.length; i++) {
+            let simb = document.createElement("span");
+            simb.innerText = tex.charAt(i);
+            simb.style.fontSize = Math.floor((Math.sin(i * .4) * 8) + 20) + "px" ;
 
-/*
-    tex.filter((word, index) =>{
-            if (index % 6 === 0 ){
-                word.style.fontSize +=5
-            }
-            console.log(tex) ;
+            //Attaching the new text to the target
+            targ.appendChild(simb);
+
+        }
     }
-
-
-    )
-
- */
-    document.getElementById("target").innerText = tex;
-})();
+)();

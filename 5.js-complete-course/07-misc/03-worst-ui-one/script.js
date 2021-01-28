@@ -9,8 +9,14 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+    //Selecting the attributes
+    let slider = document.querySelector("#slider");
+    let val = document.querySelector("#target");
 
-    // your code here
+    //Directing the value
+    slider.oninput = function () {
+        val.innerHTML = "0" + this.value;
+    }
 
 })();
