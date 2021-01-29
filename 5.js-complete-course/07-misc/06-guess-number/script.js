@@ -27,23 +27,21 @@
     */
 
     let x = Math.floor(Math.random() * 100);
-    let counter = 0;
-    let inp;
-
-    console.log(x);
-    inp = prompt("Gues the number");
+    let counter = 1;
+    let inp = prompt("Guess the number") ;
 
     while (inp !== x) {
-        counter++;
         if (inp > x) {
-            prompt("Lower...");
+            inp = prompt("Lower...");
+            counter++;
         } else if (inp < x) {
-            prompt("Higher...");
-        }else if (inp === x){
-            prompt("Congratulations! You guest it from the " +counter + "time.") ;
+            inp = prompt("Higher...");
+            counter++;
+        } else {
+            prompt("Congratulations! You needed only " + counter + " guesses.");
+            break
+        }
+
     }
-
-
-}
 
 })();
