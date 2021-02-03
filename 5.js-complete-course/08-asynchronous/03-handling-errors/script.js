@@ -10,5 +10,18 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    //Getting the button
+    document.getElementById("run").addEventListener("click", () => {
+        //Getting the list
+        window.lib.getPersons((error, people) => {
+            //Setting the error possibilities
+            if (error !== null) {
+                console.error(error);
+                //Showing the list
+            } else {
+                console.log(people);
+            }
+        });
+    })
 })();
+
